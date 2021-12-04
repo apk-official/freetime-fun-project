@@ -1,4 +1,3 @@
-
 // Mute switch
 
 const icon = document.querySelector("picture");
@@ -32,7 +31,7 @@ const bgChange = button.addEventListener("click", function () {
   const audio = document.querySelector("audio");
   ghost1.classList.add("ghost-animate-left");
   ghost2.classList.add("ghost-animate-right");
-  navigator.vibrate(500, 200, 500, 250, 50, 500, 500, 250, 250, 500);
+  navigator.vibrate([500, 250, 500, 250, 500, 250, 500, 250, 500, 250, 500]);
   heading.classList.add("glow");
   button.classList.add("spooky-button-in");
   buttonPump.classList.add("spooky-button-out");
