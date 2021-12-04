@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Slackey", cursive;
+  background: linear-gradient(rgba(0, 0, 0, 0.762), rgba(20, 1, 58, 0.653)),
+    url(/background.jpg);
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+h1 {
+  font-size: 5rem;
+  color: rgb(247, 149, 1);
+  filter: drop-shadow(2px 4px 2px #000);
+  text-align: center;
+}
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1.5rem;
+  border-radius: 1.875rem 1.375rem 1rem 1.25rem;
+  gap: 0.8rem;
+  outline: none;
+  border: none;
+  font-family: "Slackey", cursive;
+  font-size: 1.5rem;
+  background: linear-gradient(#EB6122,#86383F);
+  color: #f79501;
+  transition: 0.4s;
+}
+.main-btn:hover{
+    box-shadow: 0px 0px 30px #f79501 ;
+}
+.icon {
+  width: 2rem;
+  height: auto;
+  filter: invert(67%) sepia(85%) saturate(3453%) hue-rotate(4deg) brightness(103%) contrast(98%);
+}
+picture {
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  fill: #fff;
+  filter: invert(100%) sepia(0%) saturate(7492%) hue-rotate(140deg)
+    brightness(90%) contrast(95%);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.disable {
+  display: none;
+}
+.ghost{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: none;
+    
+}
+.ghost2{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform:rotateY(180deg);
+    display: none;
+}
+.ghost-animate-left{
+    display: block;
+    animation: ghostMoveLeft 5s ease-in;
+}
+.ghost-animate-right{
+    display: block;
+    animation: ghostMoveRight 5s ease-in;
+}
+.pump-button{
+    background:none;
+    display: none;
+}
+.spooky-button-out{
+    animation: appear 2s ease-in;
+    display: block;
+}
+.spooky-button-in{
+    animation: disappear 3s ease-out;
+    display: none;
+}
+
+/* ----------------------Spooky Effect---------------------------*/
+.glow {
+  color: rgb(228, 83, 5);
+  animation: glow 0.5s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fcc89b, 0 0 20px #fcc89b, 0 0 30px #e60073,
+      0 0 20px #e60073, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073;
+  }
+
+  to {
+    text-shadow: 0 0 20px #fcc89b, 0 0 30px #ff4da6, 0 0 20px #ff4da6,
+      0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6;
+  }
+}
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fcc89b, 0 0 20px #fcc89b, 0 0 30px #e60073,
+      0 0 20px #e60073, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073;
+  }
+
+  to {
+    text-shadow: 0 0 20px #fcc89b, 0 0 30px #fcc89b, 0 0 20px #ff4da6,
+      0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6;
+  }
+}
+/*--------------------------------------*/
+/*-----------Ghost Animation-------------*/
+/*--------------------------------------*/
+@keyframes ghostMoveLeft {
+   0%{
+       bottom: 0;
+       right: 0;
+   }
+   100%{
+    bottom: 100%;
+    right: 100%;
+   }
+}
+@keyframes ghostMoveRight {
+    0%{
+        bottom: 0;
+        left: 0;
+    }
+    100%{
+     bottom: 100%;
+     left: 100%;
+    }
+ }
+
+/*--------------------------------------*/
+/*-----------Button Animation-------------*/
+/*--------------------------------------*/
+@keyframes disappear {
+    from{
+        opacity: 1;
+    }
+    to{
+     opacity: 0;
+    }
+ }
+ @keyframes appear {
+    from{
+        opacity: 0;
+    }
+    to{
+     opacity: 1;
+    }
+ }
+
+ @media  (max-width: 768px){
+    h1{
+        font-size: 3rem;
+        padding-left: 1rem;
+    }
+ }
+     
