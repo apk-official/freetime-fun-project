@@ -6,7 +6,7 @@
 body {
   font-family: "Slackey", cursive;
   background: linear-gradient(rgba(0, 0, 0, 0.762), rgba(20, 1, 58, 0.653)),
-    url(./background.jpg);
+    url(/background.jpg);
   background-size: cover;
   width: 100vw;
   height: 100vh;
